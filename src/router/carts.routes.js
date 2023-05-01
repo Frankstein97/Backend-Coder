@@ -11,6 +11,12 @@ CartRouter.post("/", async (req, res ) => {
 CartRouter.get("/", async (req, res ) => {
     res.send(await carts.readCarts())
 })
+CartRouter.get("/products", async (req, res ) => {
+    res.send(await carts.readCarts())
+})
+CartRouter.get("/realtimeproducts", async (req, res ) => {
+    res.send(await carts.readCarts())
+})
 CartRouter.get("/:id", async (req, res ) => {
     res.send(await carts.getcartById(req.params.id))
 })

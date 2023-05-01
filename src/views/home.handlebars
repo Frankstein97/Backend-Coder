@@ -1,0 +1,25 @@
+{{!-- //este es el papa de todos  --}}
+{{!-- {{>Navbar}}
+<p>
+Extraño frontEnd y ya me olvide todo :C
+</p> --}}
+<h1>Hola Mundo</h1>
+
+{{!-- 
+
+{{#if admin }}
+<p> soy admin veo cosas</p>
+{{#each products}}
+<h2>{{this.nombre}}</h2>
+<p>{{this.apellido}}</p>
+{{/each}}
+    {{> saludo}}
+    {{else }}
+    <p> no soy admin no veo nadah</p>
+{{/if}} --}}
+
+{{#each products}}
+<h2>{{this.producto}}</h2>
+<p>{{this.msg}}</hp>
+<h4>{{this.id}}</h4>
+{{/each}}
