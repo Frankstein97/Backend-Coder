@@ -1,12 +1,12 @@
 import {promises as fs, write} from "fs"
 // generador de ids
-import { nanoid } from "nanoid";
+// import { nanoid } from "nanoid";
 
 class ProductManager { 
     constructor () {
         this.path = "./src/models/products.json"
     }
-
+// funciones que me ayudaran a no repetir
     readProducts = async () => {
     let products = await fs.readFile(this.path, "utf-8");
     return JSON.parse(products);
@@ -22,18 +22,38 @@ class ProductManager {
         return this.getProductsById =products.find (prod => prod.id === id)
     }
 
-
-
-
     //esta funcion agregara productos
-    addProducts = async (product)  => {
-        let productsOld = await this.readProducts()
-        product.id = nanoid()
-        let productAll = [...productsOld, product]
-        await this.writeProducts(productAll)
-        return "Agregado correctamente"
-        // console.log(productsParse)
-    }
+    // addProducts = async (product)  => {
+    //     let productsOld = await this.readProducts()
+    //     product.id = nanoid()
+    //     let productAll = [...productsOld, product]
+    //     await this.writeProducts(productAll)
+    //     return "Agregado correctamente"
+    //     // console.log(productsParse)
+
+        
+    // }
+    addProducts = async (obj) => {
+            const products = await this.readProducts();
+            const product = {
+                title: obj.title,
+                description: obj.description,
+                code: obj.code,
+                price: Number(obj.price),
+                stock: Number(obj.stock),
+                img: [obj.img],
+            };
+
+            if (products.length === 0) {
+                product.id = 1
+            } else {
+                product.id = products[products.length - 1].id + 1;
+            };
+            products.push(product);
+            await fs.writeFile(this.path, JSON.stringify(products, null, '\t'));
+            return product;
+    };
+
 
     // esta funcion obtiene productos del json 
     getProducts = async () => {

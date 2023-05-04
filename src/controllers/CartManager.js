@@ -1,4 +1,5 @@
 import { promises as fs, write } from "fs";
+// generador de ID
 import { nanoid } from "nanoid";
 import ProductManager from "./ProductManager.js";
 
@@ -9,6 +10,7 @@ class CartManager {
     this.path = "./src/models/carts.json";
   }
 
+  // funciones que me ayudaran a no repetir
   readCarts = async () => {
     let carts = await fs.readFile(this.path, "utf-8");
     return JSON.parse(carts);

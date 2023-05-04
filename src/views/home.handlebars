@@ -1,25 +1,33 @@
-{{!-- //este es el papa de todos  --}}
-{{!-- {{>Navbar}}
-<p>
-Extraño frontEnd y ya me olvide todo :C
-</p> --}}
-<h1>Hola Mundo</h1>
 
-{{!-- 
+    <h1>Lista de productos en el servidor <br> "http://localhost:8080/"</h1>
 
-{{#if admin }}
-<p> soy admin veo cosas</p>
-{{#each products}}
-<h2>{{this.nombre}}</h2>
-<p>{{this.apellido}}</p>
-{{/each}}
-    {{> saludo}}
-    {{else }}
-    <p> no soy admin no veo nadah</p>
-{{/if}} --}}
+<div class="table">
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Code</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Image</th>
+        <th>ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each products}}
+      <tr>
+        <td>{{this.title}}</td>
+        <td>{{this.description}}</td>
+        <td>{{this.code}}</td>
+        <td>${{this.price}}</td>
+        <td>{{this.stock}}</td>
+        <td><img src="{{this.img}}" alt="{{this.title}}"></td>
+        <td>{{this.id}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
 
-{{#each products}}
-<h2>{{this.producto}}</h2>
-<p>{{this.msg}}</hp>
-<h4>{{this.id}}</h4>
-{{/each}}
+

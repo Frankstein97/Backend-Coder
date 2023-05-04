@@ -1,6 +1,143 @@
-body {
-    background-color: rgb(255, 153, 153);
-}
-p {
-    color: rgb(161, 161, 165);
-}
+.external {
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+#form {
+    margin: 0 auto;
+    max-width: 400px;
+    padding-bottom: 2rem;
+  }
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0062cc;
+    cursor: pointer;
+  }
+  
+  .product {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .product-image {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+  }
+  
+  .product-details {
+    flex: 1;
+  }
+  
+  .product-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .product-description {
+    margin-bottom: 10px;
+  }
+  
+  .product-info {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .product-info li {
+    margin-bottom: 5px;
+  }
+  
+  .eliminar {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .eliminar:hover {
+    background-color: #0062cc;
+  }
+  
+  
+
+/* /////////////// */
+
+.table {
+    overflow-x: auto;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  thead {
+    background-color: #f2f2f2;
+  }
+  
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  td img {
+    height: 50px;
+    width: 50px;
+  }
+  
